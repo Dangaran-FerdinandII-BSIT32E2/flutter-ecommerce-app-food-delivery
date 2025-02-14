@@ -1,6 +1,6 @@
 # food_delivery
 
-A new Flutter project.
+A new Flutter learning material. Forked from dbestech.
 
 ## Getting Started
 
