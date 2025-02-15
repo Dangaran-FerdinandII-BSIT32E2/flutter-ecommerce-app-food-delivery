@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/home/food_page_body.dart';
 import 'package:food_delivery/utils/colors.dart';
+import 'package:food_delivery/utils/dimensions.dart';
 import 'package:food_delivery/widgets/big_text.dart';
 import 'package:food_delivery/widgets/small_text.dart';
 
@@ -14,12 +15,15 @@ class MainFoodPage extends StatefulWidget {
 class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
+    // print("Current height is " + MediaQuery.of(context).size.height.toString()); //learn the height of the screen
+    // print("Current width is " + MediaQuery.of(context).size.width.toString());
     return Scaffold(
       body: Column(
       children: [
+        //header
         Container(
-          margin: const EdgeInsets.only(top:45, bottom:15),
-          padding: const EdgeInsets.only(left: 20, right: 20),
+          margin: EdgeInsets.only(top: Dimensions.heigth45, bottom: Dimensions.height15),
+          padding: EdgeInsets.only(left: Dimensions.width20, right: Dimensions.width20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -35,19 +39,26 @@ class _MainFoodPageState extends State<MainFoodPage> {
                     ),
                     Center(
                       child: Container(
-        width: 45,
-        height: 45,
-        child: const Icon(Icons.search, color: Colors.white),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          color: AppColors.mainColor,
-        )
+                        width: Dimensions.width45,
+                        height: Dimensions.heigth45,
+                        child: Icon(
+                            Icons.search, 
+                            color: Colors.white, 
+                            size: Dimensions.iconSize24,
+                          ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(Dimensions.radius15),
+                          color: AppColors.mainColor,
+                        ),
                       ),
                     ),
                   ],
                 ),
               ),
-        const FoodPageBody(),
+        //body
+        const Expanded(child: SingleChildScrollView( //makes the app scrollable vertically
+          child: FoodPageBody(),
+        ))
       ],
     )
     ); 
