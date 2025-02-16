@@ -4,6 +4,7 @@ import 'package:food_delivery/utils/dimensions.dart';
 import 'package:food_delivery/widgets/app_column.dart';
 import 'package:food_delivery/widgets/app_icon.dart';
 import 'package:food_delivery/widgets/big_text.dart';
+import 'package:food_delivery/widgets/expandable_text_widget.dart';
 import 'package:food_delivery/widgets/icon_and_text_widget.dart';
 import 'package:food_delivery/widgets/small_text.dart';
 
@@ -15,6 +16,7 @@ class PopularFoodDetail extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(children: [
+          //background image
           Positioned(
               left: 0,
               right: 0,
@@ -29,6 +31,7 @@ class PopularFoodDetail extends StatelessWidget {
                 ),
               ),
             ),
+          //icon widgets
           Positioned(
               top: Dimensions.height45,
               left: Dimensions.width20,
@@ -41,6 +44,7 @@ class PopularFoodDetail extends StatelessWidget {
                 ],
               ),
             ),
+          //intro of food
           Positioned(
               left: 0,
               right: 0,
@@ -61,12 +65,14 @@ class PopularFoodDetail extends StatelessWidget {
                   const AppColumn(text: "Chinese Side"),  
                   SizedBox(height: Dimensions.height20,),
                   BigText(text: "Introduce"),
+                  const Expanded(child: SingleChildScrollView(child: ExpandableTextWidget(text: "Our Chinese Sides are unlike anything you've tried. We start with the finest bamboo shoots, flash-frying them to achieve the perfect balance of crispness and tenderness. The magic happens when they meet our secret-recipe chili oil, a fragrant explosion of Sichuan spices. A truly unforgettable dish."))),
                 ],)
               ),
             ),
+
           ],
       ),
-      bottomNavigationBar: Container(
+      bottomNavigationBar: Container( 
         height: Dimensions.bottomHeightBar,
         padding: EdgeInsets.only(left: Dimensions.width30, right: Dimensions.width30, top: Dimensions.height20, bottom: Dimensions.height20),
         decoration: BoxDecoration(
@@ -92,6 +98,9 @@ class PopularFoodDetail extends StatelessWidget {
                 SizedBox(width: Dimensions.width5,),
                  const Icon(Icons.add, color: AppColors.signColor),
             ],)
+          ),
+          Container(
+
           ),
           Container(
             padding: EdgeInsets.only(top: Dimensions.height20, bottom: Dimensions.height20, left: Dimensions.width20, right: Dimensions.width20), 
