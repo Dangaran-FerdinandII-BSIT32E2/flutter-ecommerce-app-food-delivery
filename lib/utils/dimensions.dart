@@ -15,7 +15,7 @@ class Dimensions {
   static double height15 = screenHeight / 50.293335215250015;
   static double height20 = screenHeight / 37.720001220703125;
   static double height30 = screenHeight / 25.14666748046875;
-  static double heigth45 = screenHeight / 16.711111068725586;
+  static double height45 = screenHeight / 16.711111068725586;
   static double height100 = screenHeight / 7.544000244140625;
   static double height120 = screenHeight / 6.286666870117188;
   static double height700 = screenHeight / 1.7142857142857142;
@@ -32,6 +32,7 @@ class Dimensions {
   //font sizes
   static double font12 = screenHeight / 62.70000076293945;
   static double font20 = screenHeight / 37.720001220703125;
+  static double font26 = screenHeight / 28.38461685180664;
 
   //radius
   static double radius15 = screenHeight / 50.293335215250015;
@@ -40,9 +41,15 @@ class Dimensions {
 
   //icon size
   static double iconSize24 = screenHeight / 31.375000953674316;
+  static double iconSize16 = screenHeight / 47.062500953674316;
 
   //list view size
   static double listViewImgSize = screenWidth / 4.1666666666666679;
   static double listViewTextContainerSize = screenWidth / 5;
 
+  //popular food size
+  static double popularFoodImgSize = screenHeight / 2.224000069754464;
+
+  //bottom height
+  static double bottomHeightBar = screenHeight / 6.486666870117188;
 }
