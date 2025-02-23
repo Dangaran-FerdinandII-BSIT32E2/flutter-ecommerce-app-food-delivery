@@ -49,7 +49,7 @@ class PopularFoodDetail extends StatelessWidget {
               left: 0,
               right: 0,
               bottom: 0,
-              top: Dimensions.popularFoodImgSize - 20,
+              top: Dimensions.popularFoodImgSize - Dimensions.height100,
             child: Container(
                 padding: EdgeInsets.only(left: Dimensions.width20, right: Dimensions.width20, top: Dimensions.height20),
                 decoration: BoxDecoration(
@@ -65,7 +65,8 @@ class PopularFoodDetail extends StatelessWidget {
                   const AppColumn(text: "Chinese Side"),  
                   SizedBox(height: Dimensions.height20,),
                   BigText(text: "Introduce"),
-                  const Expanded(child: SingleChildScrollView(child: ExpandableTextWidget(text: "Our Chinese Sides are unlike anything you've tried. We start with the finest bamboo shoots, flash-frying them to achieve the perfect balance of crispness and tenderness. The magic happens when they meet our secret-recipe chili oil, a fragrant explosion of Sichuan spices. A truly unforgettable dish."))),
+                  SizedBox(height: Dimensions.height20,),
+                  const Expanded(child: SingleChildScrollView(child: ExpandableTextWidget(text: "Our Chinese Sides are unlike anything you've tried. We start with the finest bamboo shoots, flash-frying them to achieve the perfect balance of crispness and tenderness. The magic happens when they meet our secret-recipe chili oil, a fragrant explosion of Sichuan spices. A truly unforgettable dish. Our Chinese Sides are unlike anything you've tried. We start with the finest bamboo shoots, flash-frying them to achieve the perfect balance of crispness and tenderness. The magic happens when they meet our secret-recipe chili oil, a fragrant explosion of Sichuan spices. A truly unforgettable dish."))),
                 ],)
               ),
             ),
